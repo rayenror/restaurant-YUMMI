@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummi Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS Styling -->
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #761919;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section -Navbar Styling */
+        nav {
+            background-color: #ad2a2a;
+        }
+
+        nav .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav .navbar-nav .nav-link {
+            color: #fff !important;
+            font-size: 1.1rem;
+        }
+
+        nav .navbar-nav .nav-link:hover {
+            color: #b0f312 !important;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            background-color: #f39c12;
+            border: none;
+        }
+
+        .hero .btn:hover {
+            background-color: #e67e22;
+        }
+
+        /* Menu Section Styling */
+        #menu {
+            padding: 60px 0;
+            background-color: #f4f4f4;
+        }
+
+        #menu h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(229, 7, 7, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            border-radius: 10px;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text strong {
+            font-size: 1.2rem;
+            color: #e67e22;
+        }
+
+        /* About Us  Styling */
+        #about-us {
+            padding: 60px 0;
+        }
+
+        #about-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        #about-us p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Form  Styling */
+        #contact {
+            padding: 60px 0;
+            background-color: #f4f4f4;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background-color: #f39c12;
+            border: none;
+            padding: 12px 40px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+        }
+
+        /* Footer Section Styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #f39c12;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .menu .col-md-4 {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> YUMMI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div>
+            <h1>Welcome to Our Restaurant</h1>
+            <p>Delicious food, great ambiance</p>
+            <a href="#menu" class="btn btn-primary">View Menu</a>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="container my-5">
+        <h2 class="text-center mb-4">Our Menu</h2>
+        <div class="row">
+            <!-- Menu Item 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="tacos-authentic-mexican-food.jpg" class="card-img-top" alt="Dish 1">
+                    <div class="card-body">
+                        <h5 class="card-title"> tacos</h5>
+                        <p class="card-text">A delicious dish that will make your taste buds dance.</p>
+                        <p class="card-text"><strong>$15.00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu Item 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="veggie-pizza-side-view-out-of-oven-720x480.png" class="card-img-top" alt="Dish 2">
+                    <div class="card-body">
+                        <h5 class="card-title">pizza</h5>
+                        <p class="card-text">A delicious dish that will make your taste buds dance.</p>
+                        <p class="card-text"><strong>$50.00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu Item 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="l-intro-1666963587.jpg" width="400" height="242" class="card-img-top" alt="Dish 3">
+                    <div class="card-body">
+                        <h5 class="card-title">sushi</h5>
+                        <p class="card-text">A delicious dish that will make your taste buds dance.</p>
+                        <p class="card-text"><strong>$100</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="container my-5">
+        <h2 class="text-center mb-4">About Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="DALL·E 2025-03-21 16.23.36 - A modern and elegant 'About Us' food-themed image for YUMMI. The design should feature fresh ingredients like fruits, vegetables, and gourmet dishes a.webp"
+                    class="img-fluid" alt="About Us Image" width="500" height="300">
+            </div>
+            <div class="col-md-6">
+                <p>Our restaurant is Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit unde cupiditate
+                    saepe fugit temporibus odio ratione pariatur nesciunt, voluptatum, qui animi laborum? Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Nulla quae reprehenderit dolores ullam ab quas porro
+                    tempora dignissimos corporis, 2005 blanditiis, repellat quaerat, nostrum tenetur 1919 cum deleniti
+                    aut officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quo sed exercitationem
+                    quidem tempora, placeat, officia ratione deserunt iusto dolorem soluta dignissimos in quia ullam
+                    cumque blanditiis fugit perspiciatis non.illo id.Quas 57% sapiente beatae aliquam veritatis deserunt
+                    earum tempora. committed to providing the highest quality food in a welcoming and relaxing
+                    environment. Whether you’re coming in for a casual lunch or a special occasion, we ensure that every
+                    meal is an experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="text-center">
+            <pre>&copy; 2025 YUMMI. 
+ </pre>
+            <div>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS & Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
